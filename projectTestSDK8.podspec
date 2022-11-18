@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'projectTestSDK8'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'testing sdk'
  
   s.description      = 'testing sdk'
@@ -11,11 +11,15 @@ Pod::Spec.new do |s|
   #s.source_files = 'CreditScoreSDK.framework'
   s.resources = [ "CreditScoreSDK.framework/CreditScore.bundle" ]
   s.vendored_frameworks = 'CreditScoreSDK.framework'
+  s.static_framework = true
 
   s.ios.deployment_target = '10.0'
 
   s.swift_version = '5.0'
   
   s.frameworks = 'Foundation', 'UIKit', 'CoreData'
+
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
 end
