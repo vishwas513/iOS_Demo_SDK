@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'projectTestSDK8'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'testing sdk'
  
   s.description      = 'testing sdk'
@@ -9,7 +9,8 @@ Pod::Spec.new do |s|
   s.author           = { 'Test' => 'test65@gmail.com' }
   s.source           = { :http => 'https://github.com/vishwas513/iOS_Demo_SDK/raw/main/SDK.zip' }
   #s.source_files = 'CreditScoreSDK.framework'
-   s.resources = [ "CreditScoreSDK.framework/CreditScore.bundle" ]
+  s.resources = [ "CreditScoreSDK.framework/CreditScore.bundle" ]
+  s.vendored_frameworks = 'CreditScoreSDK.framework'
 
   s.ios.deployment_target = '10.0'
 
