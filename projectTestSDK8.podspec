@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'projectTestSDK8'
-  s.version          = '1.0.7'
+  s.version          = '1.0.8'
   s.summary          = 'testing sdk'
  
   s.description      = 'testing sdk'
